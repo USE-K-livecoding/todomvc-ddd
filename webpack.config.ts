@@ -22,7 +22,6 @@ const config: Webpack.Configuration = {
         },
     },
     output: {
-        
         path: Path.resolve("dist"),
     },
     entry: {

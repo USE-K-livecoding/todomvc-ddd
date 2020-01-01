@@ -5,6 +5,9 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
     ],
+    rules: {
+        "eol-last": ["error", "always"],
+    },
     overrides: [
         {
             files: [ "*.ts", "*.tsx" ],
