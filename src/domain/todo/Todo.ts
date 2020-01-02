@@ -6,7 +6,7 @@ export default class Todo implements Entity<Todo> {
     public readonly id: TodoId;
 
     public title: TodoTitle;
-    
+
     public constructor(title: TodoTitle);
     public constructor(id: TodoId, title: TodoTitle);
     public constructor(...args: [TodoTitle] | [TodoId, TodoTitle]) {
