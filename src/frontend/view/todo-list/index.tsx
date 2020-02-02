@@ -1,15 +1,21 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import TodoListHeaderView from "./TodoListHeaderView";
 import TodoListMainView from "./TodoListMainView";
 import TodoListFooterView from "./TodoListFooterView";
 import TodoList from "@/domain/todo/TodoList";
 import TodoFrontendService from "@/frontend/service/TodoFrontendService";
-import { ShowType } from "./ShowType";
+import ShowType from "./ShowType";
+import ShowPath from "./ShowPath";
 
 const todoService = new TodoFrontendService();
 
 const TodoListView = () => {
-    const [nowShowing, setNowShowing] = React.useState<ShowType>("all");
+    const location = useLocation();
+
+    const [nowShowing, setNowShowing] = React.useState<ShowType>(
+        ShowPath.toType(location.pathname)
+    );
     const [todoList, setTodoList] = React.useState(new TodoList());
 
     React.useEffect(
@@ -18,7 +24,6 @@ const TodoListView = () => {
         },
         []
     );
-
 
     return (
         <div>

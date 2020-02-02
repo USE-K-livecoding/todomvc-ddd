@@ -1,10 +1,10 @@
 import React from "react";
-import TodoListView from "./view/todo-list";
+import View from "./view";
 
 const Application: React.FC = () => {
     return (
         <React.Fragment>
-            <TodoListView />
+            <View />
         </React.Fragment>
     )
 };

@@ -5,7 +5,7 @@ import TodoStatus from "@/domain/todo/TodoStatus";
 import Todo from "@/domain/todo/Todo";
 import TodoId from "@/domain/todo/TodoId";
 import TodoTitle from "@/domain/todo/TodoTitle";
-import { ShowType } from "./ShowType";
+import ShowType from "./ShowType";
 
 interface TodoListMainViewProps {
     todoList: TodoList;

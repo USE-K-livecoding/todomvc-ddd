@@ -1,1 +1,2 @@
-export type ShowType = "all" | "active" | "completed";
+type ShowType = "all" | "active" | "completed";
+export default ShowType;

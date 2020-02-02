@@ -5,7 +5,9 @@ import capitalize from "capitalize";
 
 import TodoList from "@/domain/todo/TodoList";
 import taglib from "@/frontend/taglib";
-import { ShowType } from "./ShowType";
+import ShowType from "./ShowType";
+import { Link } from "react-router-dom";
+import ShowPath from "./ShowPath";
 
 const showTypes: Array<ShowType> = ["all", "active", "completed"];
 interface TodoListFooterViewProps {
@@ -39,12 +41,13 @@ const TodoListFooterView = (props: TodoListFooterViewProps) => {
                     <li
                         key={showType}
                     >
-                        <a
+                        <Link
                             className={classNames({ selected: nowShowing === showType })}
                             onClick={() => onNowShowingChange(showType)}
+                            to={ShowPath.toPath(showType)}
                         >
                             {capitalize(showType)}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
