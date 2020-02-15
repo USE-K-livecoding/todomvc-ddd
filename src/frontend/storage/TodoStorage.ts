@@ -29,12 +29,7 @@ class TodoStorage implements TodoRepository {
                 json
             );
         }
-        return new TodoList([
-            new Todo(new TodoTitle("hoge")),
-            new Todo(new TodoTitle("fuga")),
-            new Todo(new TodoTitle("foo")),
-            new Todo(new TodoTitle("baz")),
-        ]);
+        return new TodoList();
     }
 
     public async list(): Promise<TodoList> {
