@@ -43,9 +43,9 @@ const TodoListMainView = (props: TodoListMainViewProps) => {
                 id="toggle-all"
                 className="toggle-all"
                 type="checkbox"
-                onChange={(event) => {
+                onChange={() => {
                     onToggle(
-                        event.target.checked
+                        activeList.isEmpty()
                         ? TodoStatus.Active
                         : TodoStatus.Complete
                     );
