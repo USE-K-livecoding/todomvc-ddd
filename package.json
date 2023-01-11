@@ -32,7 +32,7 @@
   "dependencies": {
     "capitalize": "^2.0.1",
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.11.0",
+    "class-validator": "^0.14.0",
     "classnames": "^2.2.6",
     "pluralize": "^8.0.0",
     "react": "^16.12.0",
